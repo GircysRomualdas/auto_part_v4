@@ -1,10 +1,9 @@
 <div class="text-center">
   <h4>Admin</h4>
   <ul class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto align-items-center">
-    <li class="nav-item"><%= link_to "admin path", root_path, class: "nav-link" %></li>
+    <li class="nav-item"><%= link_to "admin home", root_path, class: "nav-link" %></li>
     <li class="nav-item"><%= link_to "customers", admin_customers_path, class: "nav-link" %></li>
-    <li class="nav-item"><%= link_to "car part", root_path, class: "nav-link" %></li>
-    <li class="nav-item"><%= link_to "order", root_path, class: "nav-link" %></li>
+    <li class="nav-item"><%= link_to "part type", admin_part_types_path, class: "nav-link" %></li>
     <div class="dropdown">
       <a href="#" class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle" id="dropdownAdmin" data-bs-toggle="dropdown" aria-expanded="false">
         <%= current_admin.email %>

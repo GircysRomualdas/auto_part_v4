@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   namespace :admin do
     resources :customers
+    resources :part_types
   end
 
   devise_for :admins, controllers: {
