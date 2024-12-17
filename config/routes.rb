@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :admins
+  namespace :admin do
+    resources :customers
+  end
+
+  devise_for :admins, controllers: {
+    registrations: "devise_admin/registrations"
+  }
   devise_for :customers
 
   get "home/index"
