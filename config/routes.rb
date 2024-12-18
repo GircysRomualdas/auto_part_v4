@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   }
   devise_for :customers
 
-  get "home/index"
+  get "home", to: "home#index"
   get "admin", to: "admin#index"
 
   root "home#index"
