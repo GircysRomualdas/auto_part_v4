@@ -1,7 +1,7 @@
 class Admin::CarPartsController < AdminController
   before_action :set_car_part, only: %i[ show destroy ]
   def index
-    @car_parts = CarPart.all
+    @pagy, @car_parts = pagy(CarPart.all)
   end
 
   def show

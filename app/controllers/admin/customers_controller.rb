@@ -1,7 +1,7 @@
 class Admin::CustomersController < AdminController
   before_action :set_customer, only: %i[ show destroy ]
   def index
-    @customers = Customer.all
+    @pagy, @customers = pagy(Customer.all)
   end
 
   def show

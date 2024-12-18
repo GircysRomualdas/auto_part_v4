@@ -1,7 +1,7 @@
 class Admin::PartTypesController < AdminController
   before_action :set_part_type, only: %i[ show edit update destroy ]
   def index
-    @part_types = PartType.all
+    @pagy, @part_types = pagy(PartType.all)
   end
 
   def show
